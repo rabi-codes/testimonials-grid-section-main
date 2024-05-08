@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --moderateViolet: #7541c8;
+  --veryDarkGrayishBlue: hsl(217, 19%, 35%);
+  --veryDarkBlackishBlue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(0, 0%, 81%);
+  --lightGrayishBlue: hsl(210, 46%, 95%);
+}
+.main {
+  width: 80%;
+  margin: auto;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.userComment {
+  border-radius: 15px;
+  margin: 30px 0;
+  padding: 20px 32px 30px 40px;
+}
+.userDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  img {
+    width: 40px;
+    border-radius: 50%;
+  }
+}
+.userInfo {
+  h3,
+  p {
+    font-size: 13px;
+  }
+}
+.user-1 {
+  background-color: var(--moderateViolet);
+  color: var(--lightGrayishBlue);
+  .danielImg {
+    border: 2px solid #a774f2;
+  }
+}
+.daniel {
+  z-index: 6;
+  position: relative;
+}
+.quotes {
+  z-index: 1;
+  position: absolute;
+  right: 3.5rem;
+  top: 2rem;
+}
+
+.user-2 {
+  background-color: var(--veryDarkGrayishBlue);
+  color: var(--lightGrayishBlue);
+}
+.user-3 {
+  background-color: var(--lightGrayishBlue);
+  color: var(--veryDarkGrayishBlue);
+}
+.user-4 {
+  background-color: var(--veryDarkBlackishBlue);
+  color: var(--white);
+
+  .patrickImg {
+    border: 2px solid #7541c8;
+  }
+}
+.user-5 {
+  background-color: var(--lightGrayishBlue);
+  color: var(--veryDarkGrayishBlue);
+}
+.userTestimonial {
+  h3 {
+    font-size: 18px;
+    margin: 15px 0;
+    line-height: 25px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 961px) and (max-width: 1919px) {
+  .main {
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 35px;
+    padding: 50px 20px;
+  }
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+  .userComment {
+    margin: 5px 0;
+    padding-right: 1.5rem;
+  }
+  .user-1 {
+    grid-column: span 2;
+  }
+  .quotes {
+    left: 30rem;
+    top: 3.8rem;
+  }
+
+  .user-2 {
+    grid-column: span 1;
+  }
+  .user-3 {
+    grid-column: span 1;
+  }
+  .user-4 {
+    grid-column: span 2;
+  }
+  .userTestimonial {
+    h3 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 1.5rem;
+    }
+  }
+}
